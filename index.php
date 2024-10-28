@@ -10,11 +10,11 @@
     <form action="result.php" method="get">
         <div>
             <label for="height">身高：</label>
-            <input type="number" name="height" id="height">
+            <input type="number" name="height" id="height">/cm
         </div>
         <div>
             <label for="weight">體重：</label>
-            <input type="number" name="weight" id="weight">
+            <input type="number" name="weight" id="weight">/kg
         </div>
         <div>
             <input type="submit" value="計算">
