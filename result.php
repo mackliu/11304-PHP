@@ -6,10 +6,10 @@
     <title>BMI結果</title>
 </head>
 <body>
-    
+
 <h1>BMI結果</h1>
-<div>你的身高:公分</div>
-<div>你的體重:公斤</div>
+<div>你的身高:<?=$_GET['height'];?>公分</div>
+<div>你的體重:<?=$_GET['weight'];?>公斤</div>
 <div>你的BMI為:</div>
 <div>體位判定為:</div>
 <div>
