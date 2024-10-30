@@ -51,8 +51,8 @@
 </head>
 <body>
 <?php
-session_start();
-if(!isset($_SESSION['login'])){
+
+if(!isset($_COOKIE['login'])){
 ?>
     <div class="login-container">
         <h2>登入</h2>
