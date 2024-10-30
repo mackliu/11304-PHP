@@ -51,7 +51,8 @@
 </head>
 <body>
 <?php
-if(!isset($_GET['login'])){
+session_start();
+if(!isset($_SESSION['login'])){
 ?>
     <div class="login-container">
         <h2>登入</h2>
