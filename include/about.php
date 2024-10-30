@@ -8,7 +8,9 @@
 </head>
 <body>
 <h1>關於我們</h1>    
-<?php include("common/navbar.php"); ?>
+<?php
+$page= "about";
+ include("common/navbar.php"); ?>
 
 <main>
     <h2>我們是一家很棒的公司</h2>

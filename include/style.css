@@ -3,3 +3,10 @@ h1{
     background-color: yellow;
     
 }
+
+.now-page{
+    padding:3px 8px;
+    border:1px solid #ccc;
+    background-color: aqua;
+    color: #333;
+}

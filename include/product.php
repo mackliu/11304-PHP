@@ -8,7 +8,9 @@
 </head>
 <body>
     <h1>產品介紹</h1>
-    <?php include("common/navbar.php"); ?>
+    <?php 
+    $page= "product";
+    include("common/navbar.php"); ?>
 
     <main>
         <h2>我們的產品</h2>

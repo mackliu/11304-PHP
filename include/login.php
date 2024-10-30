@@ -8,7 +8,9 @@
 </head>
 <body>
     <h1>登入</h1>
-    <?php include("common/navbar.php"); ?>
+    <?php 
+   $page= "login";
+    include("common/navbar.php"); ?>
     <main>
         <h2>請登入</h2>
         <form action="handle_login.php" method="POST">
