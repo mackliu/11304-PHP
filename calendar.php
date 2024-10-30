@@ -76,7 +76,22 @@ if($month+1>12){
     $nextYear=$year;
 }
 
-
+$spDate=['2024-11-07'=>"立冬",
+         '2024-06-10' => "端午節",
+         '2024-09-17' => "中秋節",
+         '2025-06-20' => "端午節",
+         '2025-09-27' => "中秋節",
+         '2026-06-30' => "端午節",
+         '2026-10-07' => "中秋節",
+         '2024-11-22'=>'小雪'];
+$holidays = [
+    '01-01' => "元旦",
+    '02-10' => "農曆新年",
+    '04-04' => "兒童節",
+    '04-05' => "清明節",
+    '05-01' => "勞動節",
+    '10-10' => "國慶日"
+];
 ?>
 <div class='nav'>
     <table style="width:100%">
@@ -108,7 +123,7 @@ if($month+1>12){
 </tr>
 <?php
 
-$firstDay="2024-{$month}-1";
+$firstDay="{$year}-{$month}-1";
 $firstDayTime=strtotime($firstDay);
 $firstDayWeek=date("w",$firstDayTime);
 
@@ -130,6 +145,14 @@ for($i=0;$i<6;$i++){
         
         echo "<td class='$isHoliday $theMonth $isToday'>";
         echo date("d",$theDayTime);
+        if(isset($spDate[date("Y-m-d",$theDayTime)])){
+            echo "<br>{$spDate[date("Y-m-d",$theDayTime)]}";
+        }
+        
+        if(isset($holidays[date("m-d",$theDayTime)])){
+            echo "<br>{$holidays[date("m-d",$theDayTime)]}";
+        }
+
         echo "</td>";
         
     }
