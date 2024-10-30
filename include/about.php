@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>關於我們</h1>    
+
 <?php
+
 $page= "about";
  include("common/navbar.php"); ?>
 
