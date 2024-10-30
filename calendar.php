@@ -10,12 +10,14 @@
 <style>
     table{
         border-collapse:collapse;
-
+        margin:auto;
     }
+
     td{
         padding:5px 10px;
         text-align: center;
         border:1px solid #999;
+        width:65px;
     }
     .holiday{
         background:pink;
@@ -29,18 +31,20 @@
         color:white;
         font-weight:bolder;
     }
+    .nav{
+        width:688px;
+        margin:auto;
+    }
+    .nav table td{
+        border:0px;
+        padding:0;
+    }
 </style>
 
 <ul>
     <li>有上一個月下一個月的按鈕</li>
     <li>萬年曆都在同一個頁面同一個檔案</li>
     <li>有前年和來年的按鈕</li>
-</ul>
-<ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
 </ul>
 <?php
 
@@ -74,11 +78,23 @@ if($month+1>12){
 
 
 ?>
-<a href="">前年</a>
-<a href="calendar.php?year=<?=$prevYear;?>&month=<?=$prevMonth;?>">上一個月</a>
-<a href="calendar.php?year=<?=$nextYear;?>&month=<?=$nextMonth;?>">下一個月</a>
-<a href="">明年</a>
-<h3><?php echo date("{$month}月");?></h3>
+<div class='nav'>
+    <table style="width:100%">
+        <tr>
+            <td style='text-align:left'>
+                <a href="">前年</a>
+                <a href="calendar.php?year=<?=$prevYear;?>&month=<?=$prevMonth;?>">上一個月</a>
+            </td>
+            <td>
+                <?php echo date("{$month}月");?>
+            </td>
+            <td style='text-align:right'>
+                <a href="calendar.php?year=<?=$nextYear;?>&month=<?=$nextMonth;?>">下一個月</a>
+                <a href="">明年</a>
+            </td>
+        </tr>
+    </table>
+</div>
 <table>
 <tr>
     <td></td>
