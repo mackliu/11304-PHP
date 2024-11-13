@@ -67,25 +67,36 @@
 </head>
 
 <body>
+    <div>
+        <?php
+        if (isset($_GET['status'])) {
+            if ($_GET['status'] == 1) {
+                echo "註冊成功";
+            } else {
+                echo "註冊失敗";
+            }
+        }
+        ?>
+    </div>
     <h1>會員註冊</h1>
     <!--form:post>(label+input:text)*4+div>input:submit+input:reset-->
 
-    <form action="" method="post">
+    <form action="reg.php" method="post">
         <div>
             <label for="">帳號</label>：
-            <input type="text" name="" id="">
+            <input type="text" name="acc" id="">
         </div>
         <div>
             <label for="">密碼</label>：
-            <input type="text" name="" id="">
+            <input type="password" name="pw" id="">
         </div>
         <div>
             <label for="">電子郵件</label>：
-            <input type="text" name="" id="">
+            <input type="text" name="email" id="">
         </div>
         <div>
             <label for="">電話</label>：
-            <input type="text" name="" id="">
+            <input type="text" name="tel" id="">
         </div>
         <div>
             <input type="submit" value="註冊">
