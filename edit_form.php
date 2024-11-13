@@ -104,7 +104,8 @@
             <input type="text" name="tel"  value="<?=$mem['tel'];?>">
         </div>
         <div>
-            <input type="submit" value="註冊">
+            <input type="hidden" name="id" value="<?=$mem['id'];?>">
+            <input type="submit" value="編輯">
             <input type="reset" value="重置">
         </div>
     </form>
